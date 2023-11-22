@@ -1,0 +1,13 @@
+git init
+git status
+git add .
+commit -m "nome do commit"
+git remote add origin git@github.com:EsleyOnGit/Aplicacoes-Web-projeto.git
+git branch -M man
+passo da linha 5 novamente
+git push -u origin main
+
+git branch -m main master
+git fetch origin
+git branch -u origin/master master
+git remote set-head origin -a

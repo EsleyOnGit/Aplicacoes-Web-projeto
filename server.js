@@ -4,23 +4,23 @@ const cors = require('cors')
 
 const app = express()
 
-var corOptions = {
-    origin: 'http://localhost:8081'
-}
+// var corOptions = {
+//     origin: 'http://localhost:8081'
+// }
 
-// middleware
-app.use(cors(corOptions))
+//middleware
+//app.use(cors(corOptions))
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
 // routers
-const router = require('./routers/productRouter')
-app.use('/api/products', router)
+// const router = require('./routers/productRouter.js')
+// app.use('/api/products', router)
 
 
 //testing api
 app.get('/', (req, res) => {
-    res.json({message: 'estamos com a API'})
+    res.json({message: 'estamos com a API funcionando'})
 })
 
 // Port

@@ -56,12 +56,13 @@ const getPublishedProduct = async (req, res) =>{
 
 //7. conetar um para muitos ralação product e reviews
 const getProductReviews = async (req, res) =>{
+    const id =  req.params.id;
     const data = await Product.findAll({
         include:[{
             model: Review,
             as: 'review'
         }],
-        where: {id: 2}
+        where: {id: id }
     })
 
     res.status(200).send(data)

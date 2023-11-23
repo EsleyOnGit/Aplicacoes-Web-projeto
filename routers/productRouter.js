@@ -11,7 +11,7 @@ router.get('/allProduct', productController.getAllProducts)
 router.post('/publishedProduct', productController.getPublishedProduct)
 
 // get product Reviews
-router.get('/getProductReviews', productController.getProductReviews)
+router.get('/getProductReviews/:id', productController.getProductReviews)
 
 
 

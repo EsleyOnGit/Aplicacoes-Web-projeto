@@ -22,7 +22,7 @@ const EditProduct = () => {
     getDataById();
   }, [id]);
 
-  const upadateHandler = async () => {
+  const upadateHandler = async (e) => {
 
     e.preventDefault()
 

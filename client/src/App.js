@@ -13,7 +13,7 @@ function App() {
           <Route path="/addProduct" Component={addProduct} />
           <Route path="/products" Component={ShowProducts} />
           <Route path="/product/edit/:id" Component={EditProduct} />
-          <Route path="/products" Component={DetailProduct} />
+          <Route path="/products/:id" Component={DetailProduct} />
         </Switch>
       </Router>
     </>

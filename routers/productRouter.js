@@ -10,20 +10,17 @@ router.get('/allProduct', productController.getAllProducts)
 
 router.post('/publishedProduct', productController.getPublishedProduct)
 
-// get product Reviews
-router.get('/getProductReviews', productController.getProductReviews)
-
-
-
 //Reviews e controllers
 router.post('/addReview', reviewController.addReview)
-router.get('/allReview', reviewController.getAllReviews)
+router.get('/allReview/:id', reviewController.getAllReviews)
 
+// get product Reviews
+router.get('/getProductReviews/:id', productController.getProductReviews)
+router.get('/:id', productController.getOneProduct)
 
-router.post('/:id', productController.getOneProduct)
+// product router
+router.put('/:id', productController.updateProduct)
 
-router.post('/:id', productController.updateProduct)
-
-router.post('/:id', productController.deleteProduct)
+router.delete('/:id', productController.deleteProduct)
 
 module.exports = router
